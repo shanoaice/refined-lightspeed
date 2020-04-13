@@ -1,4 +1,4 @@
-base_url = "mywebsite.com"
+base_url = "https://quirky-perlman-34d0da.netlify.com"
 title = "Light Speed"
 description = "Zola theme with a perfect Lighthouse score"
 compile_sass = true
