@@ -1,6 +1,6 @@
 # Light Speed
 
-An insanely fast and performance-based Zola theme, ported from [Lite Speed Jekyll](https://github.com/bradleytaunt/lightspeed).
+An insanely fast and performance-based Zola theme, ported from [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed).
 
 Some fun facts about the theme:
 
@@ -42,7 +42,7 @@ Posts should be placed in the `blog` folder.
 Set a field in `extra` with a key of `footer_links`:
 
 ```toml
-after_dark_menu = [
+footer_links = [
     {url = "$BASE_URL/about", name = "About"},
     {url = "$BASE_URL/rss.xml", name = "RSS"},
     {url = "https://google.com", name = "Google"},
@@ -53,7 +53,7 @@ If you put `$BASE_URL` in a url, it will automatically be replaced by the actual
 site URL.
 
 ## Original
-This template is based on the Jekyll template [Lite Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
+This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
 
 **Bradley Taunt**
 - <https://github.com/bradleytaunt>
