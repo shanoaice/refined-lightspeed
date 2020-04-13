@@ -13,3 +13,12 @@ homepage = "https://github.com/carpetscheme"
 author = "Bradley Taunt"
 homepage = "https://github.com/bradleytaunt"
 repo = "https://github.com/bradleytaunt/lightspeed"
+
+[extra]
+author = ""
+email = ""
+
+footer_links = [
+    {url = "$BASE_URL/about", name = "About"},
+]
+
