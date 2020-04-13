@@ -1,12 +1,15 @@
 # Light Speed
 
-An insanely fast and performance-based Jekyll theme. Some fun facts about the theme:
+An insanely fast and performance-based Zola theme, ported from [Lite Speed Jekyll](https://github.com/bradleytaunt/lightspeed).
+
+Some fun facts about the theme:
 
 * Perfect score on Google's Lighthouse audit
 * Only ~434 bytes of CSS
 * No media queries
 * No JavaScript
-* Probably the fastest Jekyll theme on the Internet
+
+Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
 
 -----
 
