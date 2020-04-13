@@ -1,8 +1,7 @@
----
-layout: page
-title: About This Theme
-description: About the Lightspeed jekyll theme
----
++++
+title = "About This Theme"
+template = "about.html"
++++
 
 Some fun facts about the theme include:
 

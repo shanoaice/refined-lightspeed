@@ -1,0 +1,20 @@
+base_url = "mywebsite.com"
+title = "Light Speed"
+description = "Zola theme with a perfect Lighthouse score"
+compile_sass = true
+generate_rss = true
+
+highlight_code = true
+highlight_theme = "gruvbox-light"
+
+
+[extra]
+author = "Grant"
+email = "Green"
+
+footer_links = [
+    {url = "$BASE_URL/about", name = "About"},
+    {url = "$BASE_URL/rss.xml", name = "RSS"},
+    {url = "https://github.com/carpetscheme/lightspeed", name = "Source on Github"},
+]
+

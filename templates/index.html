@@ -1,0 +1,66 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %}{{ config.title }} &middot; {{ config.description }}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+    <meta name="author" content="{{ config.extra.author }}">
+    <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
+
+    {% set data = load_data(path="public/style.css", format="plain") %}
+    <style>{{ data | safe }}</style>
+
+  </head>
+  {% endblock head %}
+
+  <body>
+    <main id="main" role="main">
+
+      {% block header %}
+      <header role="banner">
+        <h3 style="margin-top:0;">
+          <a href="{{ config.base_url | safe }}" title="Home">{{ config.title }}</a>
+          <br /><small>{{ config.description }}</small>
+        </h3>
+      </header>
+      <hr />
+      {% endblock header %}
+
+      {% block content %}
+      <ul class="homepage-list" style="list-style:none;padding:1rem 0;">
+        {% set blog = get_section(path="blog/_index.md") %}
+        {% for post in blog.pages | reverse %}
+        {{ macros::post_in_list(post=post) }}
+        {% endfor %}
+      </ul>
+      {% endblock content %}
+
+      {% block footer %}
+      <footer role="contentinfo">
+        <hr />
+        <nav style="margin-bottom:1rem;" role="navigation">
+          {% for item in config.extra.footer_links %}
+            <a href="{{ item.url | safe | replace(from="$BASE_URL", to=config.base_url) }}">{{ item.name }}</a>
+            {% if loop.last %}{% else %}
+              <span>&middot;</span>
+            {% endif %}
+          {% endfor %}
+        </nav>
+            <small>
+              Built with <a href="https://www.getzola.org/">Zola</a> & hosted on
+              <a href="https://netlify.com">Netlify</a>.<br />
+              Maintained with &hearts; for the web.
+            </small>
+      </footer>
+      {% endblock footer %}
+
+    </main>
+  </body>
+</html>
+
