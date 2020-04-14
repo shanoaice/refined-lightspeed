@@ -5,8 +5,7 @@ An insanely fast and performance-based Zola theme, ported from [Light Speed Jeky
 Some fun facts about the theme:
 
 * Perfect score on Google's Lighthouse audit
-* Only ~434 bytes of CSS
-* No media queries
+* Only ~600 bytes of CSS
 * No JavaScript
 
 Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
@@ -19,8 +18,8 @@ Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.
 - [Options](#options)
   - [Title](#title)
   - [Sass](#Sass)
-  - [RSS](#RSS)
   - [Footer menu](#footer-menu)
+  - [Netlify](#netlify)
 - [Original](#original)
 - [License](#license)
 
@@ -37,12 +36,12 @@ and then enable it in your `config.toml`:
 theme = "lightspeed"
 ```
 
-Posts should be placed in the `blog` folder.
+Posts should be placed directly in the `content` folder.
 
 ## Options
 
 ### Title
-Set a tile and description for your site to appear in the header:
+Set a title and description in the config to appear in the site header:
 
 ```toml
 title = "Different strokes"
@@ -52,7 +51,7 @@ description = "for different folks"
 
 ### Sass
 
-The theme's css is compiled from sass and the output is imported inline to the header :zap:
+Styles are compiled from sass and imported inline to the header :zap:
 
 You can overide the styles by enabling sass compilation in the config:
 
@@ -60,23 +59,7 @@ You can overide the styles by enabling sass compilation in the config:
 compile_sass = true
 ```
 
-...and placing a replacement `style.scss` file in the sass folder.
-
-### RSS
-Enable rss with the standard zola option:
-
-```toml
-generate_rss = true
-```
-
-...and include your name and email in the feed by setting fields in `extra` with keys `author` and `email`:
-
-```toml
-[extra]
-
-author = "Grant Green"
-email = "grant@green.org"
-```
+...and placing a replacement `style.scss` file in your sass folder.
 
 ### Footer-menu
 Set a field in `extra` with a key of `footer_links`:
@@ -93,6 +76,22 @@ footer_links = [
 
 If you put `$BASE_URL` in a url, it will automatically be replaced by the actual
 site URL.
+
+Create pages such as `$BASE_URL/about` by placing them in a subfolder of the content directory, and specifying the path in the frontmatter:
+
+```toml
+path = "about"
+```
+
+### Netlify
+
+Deployed on netlify? Let people know in the footer by setting `netlify` in `extra` as `true`.
+
+```toml
+[extra]
+
+netlify = true
+```
 
 ## Original
 This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by **Bradley Taunt**:

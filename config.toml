@@ -1,16 +1,16 @@
 base_url = "https://quirky-perlman-34d0da.netlify.com"
 title = "Light Speed"
 description = "Zola theme with a perfect Lighthouse score"
+
 compile_sass = true
 generate_rss = true
 
 highlight_code = true
 highlight_theme = "gruvbox-light"
 
-
 [extra]
-author = "Grant"
-email = "Green"
+
+netlify = true
 
 footer_links = [
     {url = "$BASE_URL/about", name = "About"},

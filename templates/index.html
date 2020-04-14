@@ -9,7 +9,8 @@
 
     <title>{% block title %}{{ config.title }} &middot; {{ config.description }}{% endblock title %}</title>
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
-    <meta name="author" content="{{ config.extra.author }}">
+    <!-- todo author name -->
+    <meta name="author" content="">
     <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
 
@@ -34,9 +35,8 @@
 
       {% block content %}
       <ul class="homepage-list" style="list-style:none;padding:1rem 0;">
-        {% set blog = get_section(path="blog/_index.md") %}
-        {% for post in blog.pages | reverse %}
-        {{ macros::post_in_list(post=post) }}
+        {% for post in section.pages %}
+          {{ macros::post_in_list(post=post) }}
         {% endfor %}
       </ul>
       {% endblock content %}
@@ -53,8 +53,9 @@
           {% endfor %}
         </nav>
             <small>
-              Built with <a href="https://www.getzola.org/">Zola</a> & hosted on
-              <a href="https://netlify.com">Netlify</a>.<br />
+              Built with <a href="https://www.getzola.org/">Zola</a>
+              {% if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{% endif %}
+              .<br />
               Maintained with &hearts; for the web.
             </small>
       </footer>

@@ -1,15 +1,14 @@
 +++
 title = "About This Theme"
-template = "about.html"
+path = "about"
 +++
 
 Some fun facts about the theme include:
 
 * Perfect score on Google's Lighthouse audit
-* Only ~434 bytes of CSS
-* No media queries
+* Only ~600 bytes of CSS
 * No JavaScript
-* Probably the fastest Jekyll theme on the Internet <sup>1</sup>
+* Probably the fastest Zola theme on the Internet <sup>1</sup>
 
 ## Who Made This
 
