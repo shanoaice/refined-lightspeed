@@ -9,12 +9,11 @@
 
     <title>{% block title %}{{ config.title }} &middot; {{ config.description }}{% endblock title %}</title>
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
-    <!-- todo author name -->
-    <meta name="author" content="">
+    {% if config.extra.author %}<meta name="author" content="{{ config.extra.author }}" />{% endif %}
     <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
 
-    {% set data = load_data(path="public/style.css", format="plain") %}
+    {% set data = load_data(path="public/style.css", format="plain") -%}
     <style>{{ data | safe }}</style>
 
   </head>
@@ -54,7 +53,7 @@
         </nav>
             <small>
               Built with <a href="https://www.getzola.org/">Zola</a>
-              {% if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{% endif %}
+              {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{% endif -%}
               .<br />
               Maintained with &hearts; for the web.
             </small>

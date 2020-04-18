@@ -19,6 +19,7 @@ Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.
   - [Title](#title)
   - [Sass](#Sass)
   - [Footer menu](#footer-menu)
+  - [Author](#author)
   - [Netlify](#netlify)
 - [Original](#original)
 - [License](#license)
@@ -83,9 +84,19 @@ Create pages such as `$BASE_URL/about` by placing them in a subfolder of the con
 path = "about"
 ```
 
+### Author
+
+To add author name to the head meta-data, set an `author` field in `extra`:
+
+```toml
+[extra]
+
+author = "Grant Green"
+```
+
 ### Netlify
 
-Deployed on netlify? Let people know in the footer by setting `netlify` in `extra` as `true`.
+Deployed on netlify? Add a link in the footer by setting `netlify` in `extra` as `true`.
 
 ```toml
 [extra]
