@@ -39,6 +39,12 @@ theme = "lightspeed"
 
 Posts should be placed directly in the `content` folder.
 
+To sort the post index by date, enable sort in your index section `content/_index.md`:
+
+```toml
+sort_by = "date"
+```
+
 ## Options
 
 ### Title
