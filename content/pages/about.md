@@ -8,7 +8,6 @@ Some fun facts about the theme include:
 * Perfect score on Google's Lighthouse audit
 * Only ~600 bytes of CSS
 * No JavaScript
-* Probably the fastest Zola theme on the Internet <sup>1</sup>
 
 ## Who Made This
 
@@ -20,4 +19,3 @@ Have questions or suggestions? Feel free to hit me up on [Twitter](https://twitt
 
 Interested in some of my other open source projects? Check out my [portfolio](https://bradleytaunt.com).
 
-<sup>1</sup> <small>[And I base that on absolutely nothing...](https://pbs.twimg.com/media/DtZUpV7WsAAfkeB.jpg)</small>
