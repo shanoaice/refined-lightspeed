@@ -1,4 +1,4 @@
-iname = "lightspeed"
+name = "lightspeed"
 description = "Zola theme with a perfect Lighthouse score"
 license = "MIT"
 homepage = "https://github.com/carpetscheme/lightspeed"
