@@ -16,6 +16,9 @@
     {% set data = load_data(path="public/style.css", format="plain") -%}
     <style>{{ data | safe }}</style>
 
+    {% block extra_head %}
+    {% endblock extra_head %}
+
   </head>
   {% endblock head %}
 
