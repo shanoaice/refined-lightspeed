@@ -114,9 +114,9 @@ Right aligned columns
 
 ## Links
 
-[link text](http://dev.nodeca.com)
+[link text](http://github.com)
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+[link with title](http://github.com "title text!")
 
 
 ## Images

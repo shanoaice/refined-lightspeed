@@ -11,7 +11,7 @@
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
     {% if config.extra.author %}<meta name="author" content="{{ config.extra.author }}" />{% endif %}
     <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
 
     {% set data = load_data(path="public/style.css", format="plain") -%}
     <style>{{ data | safe }}</style>
