@@ -83,17 +83,18 @@
         </nav>
         {% endif %}
             <small>
-              Built with <a href="https://www.getzola.org/">Zola</a>
-              {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{% endif -%}
-              .<br />
-              Maintained with &hearts; for the web.
+              {%- if config.extra.zola -%}Built with <a href="https://www.getzola.org/">Zola</a>{%- endif -%}
+              {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{%- endif -%}
+              {%- if config.extra.zola -%}.<br />{%- endif %}
+              {% if config.extra.maintained_with_love %}Maintained with &hearts; for the web.<br />{% endif %}
+              {% if config.extra.footer_tagline %}{{ config.extra.footer_tagline }}{% endif %}
             </small>
       </footer>
       {% endblock footer %}
 
     </main>
-    {% block extra_scripts %}
-    {% endblock extra_scripts %}
+    {% block after_main %}
+    {% endblock after_main %}
   </body>
 </html>
 

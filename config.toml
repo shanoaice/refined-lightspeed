@@ -14,7 +14,9 @@ seo = true
 author = "El Carpet"
 ogimage = "lightning.png"
 
+zola = true
 netlify = true
+maintained_with_love = true
 
 footer_links = [
     {url = "$BASE_URL/about", name = "About"},

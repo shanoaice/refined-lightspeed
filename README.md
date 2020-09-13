@@ -92,6 +92,20 @@ ogimage = "Greenery.png"
 
 To disable SEO set field `seo` in `extra` to `false`.
 
+### Footer text
+
+By default the footer provides links to Zola and Netlify, and a tagline of "Mainted with :hearts for the web".
+To disable any of those parts, and/or add a custom tagline of your own, the following options are available:
+
+```toml
+[extra]
+
+zola = true
+netlify = false
+maintained_with_love = false
+footer_tagline = "What if everything is an illusion and nothing exists? In that case, I definitely overpaid for my carpet."
+```
+
 ### Sass
 
 Styles are compiled from sass and imported inline to the header :zap:
@@ -103,16 +117,6 @@ compile_sass = true
 ```
 
 ...and placing a replacement `style.scss` file in your sass folder.
-
-### Netlify
-
-Deployed on netlify? Add a link in the footer by setting `netlify` in `extra` as `true`.
-
-```toml
-[extra]
-
-netlify = true
-```
 
 ## Original
 This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
