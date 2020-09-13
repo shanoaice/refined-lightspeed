@@ -1,6 +1,8 @@
 +++
 title = "Example of elements"
 description = "Post showcasing elements"
+[extra]
+image = "favicon.ico"
 +++
 
 # h1 Heading

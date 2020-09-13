@@ -3,6 +3,17 @@
 {% block title %}{{ page.title }} &middot; {{ config.title }}{% endblock title %}
 {% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
 
+{% block ogtitle %}{{ page.title }}{% endblock ogtitle %}
+{% block ogdesc %}{{ page.description }}{% endblock ogdesc %}
+{% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl%}
+{% if page.extra.ogimage %}{% block ogimage %}hello! {% endblock ogimage %}{% endif %}
+{% block ogimage -%}
+  {%- if page.extra.image -%}{{ get_url(path=page.extra.image) | safe }}
+  {%- elif config.extra.ogimage -%}{{ get_url(path=config.extra.ogimage) | safe }}
+  {%- endif -%}
+{%- endblock ogimage %}
+
+
 {% block content %}
 <article>
   <h1>{{ page.title }}</h1>

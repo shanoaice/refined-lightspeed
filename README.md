@@ -7,6 +7,7 @@ Some fun facts about the theme:
 * Perfect score on Google's Lighthouse audit
 * Only ~600 bytes of CSS
 * No JavaScript
+* Now with SEO!
 
 Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
 
@@ -56,18 +57,6 @@ description = "for different folks"
 
 ```
 
-### Sass
-
-Styles are compiled from sass and imported inline to the header :zap:
-
-You can overide the styles by enabling sass compilation in the config:
-
-```toml
-compile_sass = true
-```
-
-...and placing a replacement `style.scss` file in your sass folder.
-
 ### Footer-menu
 Set a field in `extra` with a key of `footer_links`:
 
@@ -76,7 +65,7 @@ Set a field in `extra` with a key of `footer_links`:
 
 footer_links = [
     {url = "$BASE_URL/about", name = "About"},
-    {url = "$BASE_URL/rss.xml", name = "RSS"},
+    {url = "$BASE_URL/atom.xml", name = "RSS"},
     {url = "https://google.com", name = "Google"},
 ]
 ```
@@ -90,15 +79,30 @@ Create pages such as `$BASE_URL/about` by placing them in a subfolder of the con
 path = "about"
 ```
 
-### Author
+### SEO
 
-To add author name to the head meta-data, set an `author` field in `extra`:
+SEO header tags are enabled by default. Most fields are picked up from the page data, but you can set the `author` and for the `og:image` tag provide the path to an image.
 
 ```toml
 [extra]
 
 author = "Grant Green"
+ogimage = "Greenery.png"
 ```
+
+To disable SEO set field `seo` in `extra` to `false`.
+
+### Sass
+
+Styles are compiled from sass and imported inline to the header :zap:
+
+You can overide the styles by enabling sass compilation in the config:
+
+```toml
+compile_sass = true
+```
+
+...and placing a replacement `style.scss` file in your sass folder.
 
 ### Netlify
 
@@ -111,11 +115,7 @@ netlify = true
 ```
 
 ## Original
-This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by **Bradley Taunt**:
-
-- <https://github.com/bradleytaunt>
-- <https://twitter.com/bradtaunt>
-
+This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
 
 ## License
 

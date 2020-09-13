@@ -10,7 +10,10 @@ highlight_theme = "gruvbox-light"
 
 [extra]
 
+seo = true
 author = "El Carpet"
+ogimage = "lightning.png"
+
 netlify = true
 
 footer_links = [
