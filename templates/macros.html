@@ -1,5 +1,5 @@
 {% macro post_in_list(post) %}
-<li style="align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px;">
+<li>
   <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
   <time style="font-size:90%;" datetime="{{ post.date | date(format="%+") }}">{{ post.date | date(format="%B %d, %Y") }}</time>
 </li>

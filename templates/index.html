@@ -62,7 +62,7 @@
       {% endblock header %}
 
       {% block content %}
-      <ul class="homepage-list" style="list-style:none;padding:1rem 0;">
+      <ul class="homepage-list">
         {% for post in section.pages %}
           {{ macros::post_in_list(post=post) }}
         {% endfor %}

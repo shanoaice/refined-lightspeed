@@ -5,7 +5,7 @@ An insanely fast and performance-based Zola theme, ported from [Light Speed Jeky
 Some fun facts about the theme:
 
 * Perfect score on Google's Lighthouse audit
-* Only ~600 bytes of CSS
+* Only ~700 bytes of CSS
 * No JavaScript
 * Now with SEO!
 
