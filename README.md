@@ -18,10 +18,10 @@ Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.
 - [Installation](#installation)
 - [Options](#options)
   - [Title](#title)
-  - [Sass](#Sass)
   - [Footer menu](#footer-menu)
-  - [Author](#author)
-  - [Netlify](#netlify)
+  - [SEO](#seo)
+  - [Footer text](#footer-text)
+  - [Sass](#Sass)
 - [Original](#original)
 - [License](#license)
 
@@ -92,9 +92,9 @@ ogimage = "Greenery.png"
 
 To disable SEO set field `seo` in `extra` to `false`.
 
-### Footer text
+### Footer-text
 
-By default the footer provides links to Zola and Netlify, and a tagline of "Mainted with :hearts for the web".
+By default the footer provides links to Zola and Netlify, and a tagline of "Maintained with :heart: for the web".
 To disable any of those parts, and/or add a custom tagline of your own, the following options are available:
 
 ```toml
