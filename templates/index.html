@@ -16,8 +16,6 @@
     <style>{{ data | safe }}</style>
 
     {% block seo -%}
-    {%- if config.extra.seo or config.extra.seo is undefined -%}
-
       <meta property="og:site_name" content="{% block ogsitename %}{{config.title}}{% endblock ogsitename %}">
       {% if config.extra.author -%}
         <meta name="author" content="{{ config.extra.author }}" />
@@ -38,8 +36,6 @@
       {% if page.later -%}
         <link rel="next" href="{{ page.later.permalink | safe }}" />
       {%- endif %}
-
-    {%- endif -%}
     {%- endblock seo -%}
 
     {% block extra_head %}
@@ -82,13 +78,15 @@
           {% endfor %}
         </nav>
         {% endif %}
-            <small>
-              {%- if config.extra.zola or config.extra.zola is undefined -%}Built with <a href="https://www.getzola.org/">Zola</a>{%- endif -%}
-              {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{%- endif -%}
-              {%- if config.extra.zola or config.extra.zola is undefined -%}.<br />{%- endif %}
-              {% if config.extra.maintained_with_love or config.extra.maintained_with_love is undefined%}Maintained with &hearts; for the web.<br />{% endif %}
-              {% if config.extra.footer_tagline %}{{ config.extra.footer_tagline }}{% endif %}
-            </small>
+        {% block taglines %}
+        <small>
+          {%- if config.extra.zola or config.extra.zola is undefined -%}Built with <a href="https://www.getzola.org/">Zola</a>{%- endif -%}
+          {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{%- endif -%}
+          {%- if config.extra.zola or config.extra.zola is undefined -%}.<br />{%- endif %}
+          {% if config.extra.maintained_with_love or config.extra.maintained_with_love is undefined%}Maintained with &hearts; for the web.<br />{% endif %}
+          {% if config.extra.footer_tagline %}{{ config.extra.footer_tagline }}{% endif %}
+        </small>
+        {% endblock taglines %}
       </footer>
       {% endblock footer %}
 

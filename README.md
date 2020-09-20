@@ -81,7 +81,7 @@ path = "about"
 
 ### SEO
 
-SEO header tags are enabled by default. Most fields are picked up from the page data, but you can set the `author` and for the `og:image` tag provide the path to an image.
+Most SEO tags are populated by the page metadata, but you can set the `author` and for the `og:image` tag provide the path to an image:
 
 ```toml
 [extra]
@@ -89,8 +89,6 @@ SEO header tags are enabled by default. Most fields are picked up from the page 
 author = "Grant Green"
 ogimage = "Greenery.png"
 ```
-
-To disable SEO set field `seo` in `extra` to `false`.
 
 ### Footer-text
 
