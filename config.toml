@@ -5,6 +5,10 @@ description = "Zola theme with a perfect Lighthouse score, themed with Premier"
 compile_sass = true
 generate_feed = true
 
+[markdown]
+
+highlight_code = true
+
 [extra]
 
 seo = true

@@ -13,7 +13,6 @@
     <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
 
     <link href="https://cdn.skypack.dev/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-nord.min.css" rel="stylesheet" />
 
     {% set data = load_data(path="public/style.css", format="plain") -%}
     <style>{{ data | safe }}</style>
@@ -94,8 +93,6 @@
       {% endblock footer %}
 
     </main>
-    <script src="https://unpkg.com/prismjs@1.25.0/components/prism-core.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
     {% block after_main %}  
     {% endblock after_main %}
   </body>

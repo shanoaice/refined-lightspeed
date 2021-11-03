@@ -1,6 +1,6 @@
 # Light Speed
 
-A personalized fork of the original Light Speed Zola theme, applied Primer CSS (the CSS system powering Github) and Prism.js (sad to include this instead of native Zola syntax highlighting because Primer will override them)
+A personalized fork of the original Light Speed Zola theme, applied Primer CSS (the CSS system powering Github)
 
 Some features about the theme:
 
