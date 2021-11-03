@@ -12,6 +12,9 @@
     <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
     <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
 
+    <link href="https://cdn.skypack.dev/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-nord.min.css" rel="stylesheet" />
+
     {% set data = load_data(path="public/style.css", format="plain") -%}
     <style>{{ data | safe }}</style>
 
@@ -81,7 +84,7 @@
         {% block taglines %}
         <small>
           {%- if config.extra.zola or config.extra.zola is undefined -%}Built with <a href="https://www.getzola.org/">Zola</a>{%- endif -%}
-          {%- if config.extra.netlify %} & hosted on <a href="https://netlify.com">Netlify</a>{%- endif -%}
+          {%- if config.extra.cloudflare %} & hosted on <a href="https://pages.cloudflare.com">Cloudflare Pages</a>{%- endif -%}
           {%- if config.extra.zola or config.extra.zola is undefined -%}.<br />{%- endif %}
           {% if config.extra.maintained_with_love or config.extra.maintained_with_love is undefined%}Maintained with &hearts; for the web.<br />{% endif %}
           {% if config.extra.footer_tagline %}{{ config.extra.footer_tagline }}{% endif %}
@@ -91,7 +94,9 @@
       {% endblock footer %}
 
     </main>
-    {% block after_main %}
+    <script src="https://unpkg.com/prismjs@1.25.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+    {% block after_main %}  
     {% endblock after_main %}
   </body>
 </html>

@@ -21,6 +21,8 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
-  {{ page.content | safe }}
+  <div class="markdown-body">
+    {{ page.content | safe }}
+  </div>
 </article>
 {% endblock content %}

@@ -1,21 +1,18 @@
 base_url = "https://quirky-perlman-34d0da.netlify.com"
-title = "Light Speed"
-description = "Zola theme with a perfect Lighthouse score"
+title = "Light Speed Refined"
+description = "Zola theme with a perfect Lighthouse score, themed with Premier"
 
 compile_sass = true
 generate_feed = true
 
-highlight_code = true
-highlight_theme = "gruvbox-light"
-
 [extra]
 
 seo = true
-author = "El Carpet"
+author = "Shanoa Ice"
 ogimage = "lightning.png"
 
 zola = true
-netlify = true
+cloudflare = true
 maintained_with_love = true
 
 footer_links = [
