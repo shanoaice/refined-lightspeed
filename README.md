@@ -1,13 +1,13 @@
 # Light Speed
 
-An insanely fast and performance-based Zola theme, ported from [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed).
+A personalized fork of the original Light Speed Zola theme, applied Primer CSS (the CSS system powering Github) and Prism.js (sad to include this instead of native Zola syntax highlighting because Primer will override them)
 
-Some fun facts about the theme:
+Some features about the theme:
 
 * Perfect score on Google's Lighthouse audit
 * Only ~700 bytes of CSS
-* No JavaScript
-* Now with SEO!
+* As less amount of Javascript as possible
+* SEO enabled
 
 Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
 
@@ -15,22 +15,27 @@ Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.
 
 ## Contents
 
-- [Installation](#installation)
-- [Options](#options)
-  - [Title](#title)
-  - [Footer menu](#footer-menu)
-  - [SEO](#seo)
-  - [Footer text](#footer-text)
-  - [Sass](#Sass)
-- [Original](#original)
-- [License](#license)
+- [Light Speed](#light-speed)
+  - [Contents](#contents)
+  - [Installation](#installation)
+  - [Options](#options)
+    - [Title](#title)
+    - [Footer-menu](#footer-menu)
+    - [SEO](#seo)
+    - [Footer-text](#footer-text)
+    - [Sass](#sass)
+  - [Original](#original)
+  - [License](#license)
 
 ## Installation
 First download this theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/carpetscheme/lightspeed.git
+$ git clone https://github.com/shanoaice/refined-lightspeed.git
+
+# or use git submodules
+$ git submodules add https://github.com/shanoaice/refined-lightspeed.git themes/lightspeed
 ```
 and then enable it in your `config.toml`:
 
@@ -117,11 +122,13 @@ compile_sass = true
 ...and placing a replacement `style.scss` file in your sass folder.
 
 ## Original
-This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
+This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt and Zola template [Light Speed Zola](https://github.com/carpetscheme/lightspeed) by El Carpet.
 
 ## License
 
 Open sourced under the [MIT license](LICENSE.md).
 
-This project is open source except for example articles found in `content`.
+> This project is open source except for example articles found in `content`.
+
+Original Zola template has such license above. I did not modify anything inside the `content` folder. If the original authore cc[@carpetscheme](https://github.com/carpetscheme) or any maintainers of the original project thinks this is a license infringement, please contact me. I will remove them immediately.
 
