@@ -9,6 +9,7 @@
 
     <title>{% block title %}{{ config.title }} &middot; {{ config.description }}{% endblock title %}</title>
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+    <meta http-equiv="Content-Security-Policy" content="default-src https:; object-src 'none'" />
     <link rel="shortcut icon"  href="{{ get_url(path="favicon.ico") | safe }}" />
     <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
 
