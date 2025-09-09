@@ -1,4 +1,4 @@
-# Light Speed
+# Refined Light Speed
 
 A personalized fork of the original Light Speed Zola theme, applied Primer CSS (the CSS system powering Github)
 
@@ -9,17 +9,18 @@ Some features about the theme:
 * As less amount of Javascript as possible
 * SEO enabled
 
-Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
+Demo: [refined-lightspeed.pages.dev](https://refined-lightspeed.pages.dev/)
 
 -----
 
 ## Contents
 
-- [Light Speed](#light-speed)
+- [Refined Light Speed](#refined-light-speed)
   - [Contents](#contents)
   - [Installation](#installation)
   - [Options](#options)
     - [Title](#title)
+    - [Hidden Posts](#hidden-posts)
     - [Footer-menu](#footer-menu)
     - [SEO](#seo)
     - [Footer-text](#footer-text)
@@ -40,7 +41,7 @@ $ git submodules add https://github.com/shanoaice/refined-lightspeed.git themes/
 and then enable it in your `config.toml`:
 
 ```toml
-theme = "lightspeed"
+theme = "refined-lightspeed"
 ```
 
 Posts should be placed directly in the `content` folder.
@@ -60,6 +61,14 @@ Set a title and description in the config to appear in the site header:
 title = "Different strokes"
 description = "for different folks"
 
+```
+
+### Hidden Posts
+If you don't want your posts to get listed in the `_index.md` sections, you can set `extra.hidden` in the config to do so:
+
+```toml
+[extra]
+hidden = true
 ```
 
 ### Footer-menu
