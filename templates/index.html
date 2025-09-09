@@ -63,7 +63,9 @@
       {% block content %}
       <ul class="homepage-list">
         {% for post in section.pages %}
-          {{ macros::post_in_list(post=post) }}
+          {% if post.extra.hidden %}{% else %}
+            {{ macros::post_in_list(post=post) }}
+          {% endif %}
         {% endfor %}
       </ul>
       {% endblock content %}
